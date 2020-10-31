@@ -1,0 +1,23 @@
+ 1) Setear calidad (0.2), paredes (2), techos y piso (4), infill (15), temperaturas; poner sin soportes, velocidades para el cuerpo (50/25).
+ 2) Cargar todos los modelos (la caja y las letras).
+ 3) Verificar que en las configuraciones tengamos: preferences, configure cura, general, desmarcar automatically drop models to build plate.
+ 4) Presionar en modelo y con boton izquierdo: select all models, merge models, mover al centro (0, 0) y asegurar que el Z este en cero.
+ 5) Presionar en modelo y con boton izquierdo: ungroup models.
+ 6) Borrar las letras.
+ 7) Slice y grabar el cuerpo, cambiar el nombre con el lapiz abajo a la izquierda, tipo test_pieza_02_50_0h58m, grabar el gcode.
+ 8) Editar el archivo gcode, casi al final buscar: G1 X0 Y235 ;Present print. Cambiar Y235 por Y0 (para que el cabezal vaya adelante y no atras).
+
+ 9) En el cura, control-z para recuperar los dos cuerpos.
+10) Cambiar la velocidad a 25/12.5 para las letras.
+11) Borrar el cuerpo.
+12) Cargar el mini cono, moverlo bien adelante a la izquierda y fijarse que el Z este en 0.
+13) Slice y grabar las letras (con cono), cambiar el nombre con el lapiz abajo a la izquierda, tipo test_letras_02_25_0h06m, grabar el gcode.
+14) Editar el archivo gcode, borra casi al principio.
+	G1 X0.1 Y200.0 Z0.3 F1500.0 E15 ; Draw the first line
+	G1 X0.4 Y200.0 Z0.3 F5000.0     ; Move to side a little
+	G1 X0.4 Y20 Z0.3 F1500.0 E30    ; Draw the second line
+15) Verificar que en las configuraciones restauremos: preferences, configure cura, general: MARCAR automatically drop models to build plate.
+16) Cerrar cura.
+
+
+
